@@ -44,17 +44,15 @@ public class ReversiBoard {
      }
 
      static public List<Point> getNeighboringPoints() {
-          List<Point> Points = new ArrayList<Point>();
+          List<Point> points = new ArrayList<Point>();
           for (int x = -1; x < 2; x++) {
                for (int y = -1; y < 2; y++) {
                     Point Point = new Point(x, y);
-                    Points.add(Point);
+                    points.add(Point);
                }
           }
-
-          Points.removeIf(value -> value.toString().equals("0@0"));
-          
-          return Points;
+          points.removeIf(value -> value.toString().equals("0@0"));
+          return points;
      }
 
      public boolean hasAllyFromPointWithDirection(char piece, Point origin, Point direction) {
@@ -147,8 +145,8 @@ public class ReversiBoard {
           return true;
      }
 
-     public boolean hasAllySupportingAt(char ally, Point point) {
-          return getSupportingAllies(ally, point).size() > 0;
+     public boolean hasAllySupportingAt(char ally, Point aPoint) {
+          return getSupportingAllies(ally, aPoint).size() > 0;
      }
 
      public boolean hasNeighboringEnemyAt(char enemy, Point origin) {

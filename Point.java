@@ -6,6 +6,16 @@ public class Point {
 	protected int x;
 	protected int y;
 
+	// ACCESSORS
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	// OVERRIDES
 	@Override
 	public String toString() {
 		return String.format(x + "@" + y);
@@ -26,15 +36,7 @@ public class Point {
         return Objects.hash(getX(), getY());
     }
 
-
-	public int getX() {
-		return x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
+	// UTILTY
 	public Point add(Point aPoint) {
 		int newX = x + aPoint.getX();
 		int newY = y + aPoint.getY();
@@ -53,6 +55,7 @@ public class Point {
 		return new Point(dx, dy);
 	}
 
+	// CONSTRUCTORS
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;

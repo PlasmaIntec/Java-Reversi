@@ -9,6 +9,7 @@ public class ReversiGame {
 	protected char currentTurn;
 	protected char enemyTurn;
 
+	// INPUT
 	public String getMove() {
 		String move = "";
 		try {
